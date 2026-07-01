@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { usePathname, useRouter } from '@/i18n/navigation';
+import { usePathname, useRouter, Link } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { useTheme } from './ThemeProvider';
 import { Sun, Moon, Languages, Menu, X, Terminal as TerminalIcon } from 'lucide-react';
@@ -23,13 +23,16 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
 
-  const navItems = [
+  // Items that scroll to a section on the home page
+  const scrollItems = [
     { id: 'about', label: t('about') },
     { id: 'skills', label: t('skills') },
     { id: 'projects', label: t('projects') },
     { id: 'services', label: t('services') },
-    { id: 'contact', label: t('contact') },
   ];
+
+  const isOnContactPage = pathname === '/contact';
+  const isOnHomePage = !isOnContactPage;
 
   // Track scroll position to add border/background blur to header
   useEffect(() => {
@@ -40,11 +43,13 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // IntersectionObserver to highlight active nav item on scroll
+  // IntersectionObserver to highlight active nav item on scroll (home page only)
   useEffect(() => {
+    if (!isOnHomePage) return;
+
     const observerOptions = {
       root: null,
-      rootMargin: '-50% 0px -50% 0px', // Trigger when section occupies center of viewport
+      rootMargin: '-50% 0px -50% 0px',
       threshold: 0,
     };
 
@@ -57,8 +62,7 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    const sections = ['about', 'skills', 'projects', 'services', 'contact'];
+    const sections = ['about', 'skills', 'projects', 'services'];
     sections.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
@@ -70,7 +74,7 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
         if (el) observer.unobserve(el);
       });
     };
-  }, []);
+  }, [isOnHomePage]);
 
   const handleLanguageChange = (nextLocale: 'en' | 'el') => {
     setLangDropdownOpen(false);
@@ -79,18 +83,18 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
+    if (!isOnHomePage) {
+      // Navigate home first, then let the browser handle the hash
+      router.push(`/#${id}`);
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80; // height of sticky header
+      const offset = 80;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+      const offsetPosition = elementRect - bodyRect - offset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
 
@@ -102,8 +106,8 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo / Title */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        <Link
+          href="/"
           className="text-lg font-extrabold tracking-tight text-foreground flex items-center gap-2 cursor-none select-none hover:opacity-85"
         >
           <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-500 bg-clip-text text-transparent">
@@ -112,30 +116,63 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
           <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-widest border border-border px-1.5 py-0.5 rounded-lg bg-secondary/50">
             Dev
           </span>
-        </button>
+        </Link>
 
         {/* Desktop Nav Items */}
         <nav className="hidden md:flex items-center gap-1.5 p-1 rounded-full border border-border/30 bg-secondary/15 backdrop-blur-md">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className={`relative px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-none select-none ${
-                activeSection === item.id
-                  ? 'text-primary-foreground'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              {activeSection === item.id && (
+          {/* Scroll section items */}
+          {scrollItems.map((item) => {
+            const isActive = isOnHomePage && activeSection === item.id;
+            return (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`relative px-4 py-1.5 rounded-full text-xs font-bold transition-colors duration-200 cursor-none select-none ${
+                  isActive
+                    ? 'text-primary-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                <AnimatePresence>
+                  {isActive && (
+                    <motion.div
+                      key={item.id}
+                      initial={{ opacity: 0, scale: 0.85 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.85 }}
+                      transition={{ duration: 0.18, ease: 'easeOut' }}
+                      className="absolute inset-0 bg-primary rounded-full -z-10"
+                    />
+                  )}
+                </AnimatePresence>
+                {item.label}
+              </button>
+            );
+          })}
+
+          {/* Contact — dedicated page link */}
+          <Link
+            href="/contact"
+            className={`relative px-4 py-1.5 rounded-full text-xs font-bold transition-colors duration-200 cursor-none select-none ${
+              isOnContactPage
+                ? 'text-primary-foreground'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            <AnimatePresence>
+              {isOnContactPage && (
                 <motion.div
-                  layoutId="activeNavIndicator"
+                  key="contact-indicator"
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.85 }}
+                  transition={{ duration: 0.18, ease: 'easeOut' }}
                   className="absolute inset-0 bg-primary rounded-full -z-10"
-                  transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                 />
               )}
-              {item.label}
-            </button>
-          ))}
+            </AnimatePresence>
+            {t('contact')}
+          </Link>
         </nav>
 
         {/* Action Controls (Icons) */}
@@ -204,7 +241,6 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
 
         {/* Mobile controls & Menu Toggle */}
         <div className="flex md:hidden items-center gap-2">
-          {/* Mobile Terminal Trigger */}
           <button
             onClick={onTerminalToggle}
             className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary/60 border border-border/40 transition-all"
@@ -213,7 +249,6 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
             <TerminalIcon className="w-4 h-4 text-emerald-400" />
           </button>
 
-          {/* Mobile Theme Switcher */}
           <button
             onClick={toggleTheme}
             className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary/60 border border-border/40 transition-all"
@@ -222,7 +257,6 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
             {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
-          {/* Mobile Language Switch */}
           <button
             onClick={() => handleLanguageChange(locale === 'en' ? 'el' : 'en')}
             className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary/60 border border-border/40 transition-all uppercase text-xs font-extrabold"
@@ -231,7 +265,6 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
             {locale === 'en' ? 'EL' : 'EN'}
           </button>
 
-          {/* Mobile hamburger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary/60 border border-border/40 transition-all"
@@ -252,17 +285,26 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
             className="md:hidden w-full border-b border-border/40 glass absolute left-0 right-0 top-full overflow-hidden shadow-2xl"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
-              {navItems.map((item) => (
+              {scrollItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={`text-left py-2 font-semibold text-sm transition-colors ${
-                    activeSection === item.id ? 'text-primary' : 'text-muted-foreground'
+                    isOnHomePage && activeSection === item.id ? 'text-primary' : 'text-muted-foreground'
                   }`}
                 >
                   {item.label}
                 </button>
               ))}
+              <Link
+                href="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-2 font-semibold text-sm transition-colors ${
+                  isOnContactPage ? 'text-primary' : 'text-muted-foreground'
+                }`}
+              >
+                {t('contact')}
+              </Link>
             </div>
           </motion.div>
         )}

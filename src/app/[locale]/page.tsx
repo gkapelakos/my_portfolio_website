@@ -3,12 +3,11 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useToast } from '@/components/Toast';
+import { useRouter } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ProjectCard3D from '@/components/ProjectCard3D';
 import GithubStats from '@/components/GithubStats';
-import PricingCard from '@/components/PricingCard';
-import ContactForm from '@/components/ContactForm';
 import TerminalEasterEgg from '@/components/TerminalEasterEgg';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -29,6 +28,7 @@ export default function PortfolioPage() {
   const t = useTranslations();
   const locale = useLocale();
   const { showToast } = useToast();
+  const router = useRouter();
 
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [konamiIndex, setKonamiIndex] = useState(0);
@@ -90,14 +90,7 @@ export default function PortfolioPage() {
   };
 
   const handleCtaContact = () => {
-    const el = document.getElementById('contact');
-    if (el) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elRect = el.getBoundingClientRect().top;
-      const pos = elRect - bodyRect - offset;
-      window.scrollTo({ top: pos, behavior: 'smooth' });
-    }
+    router.push('/contact');
   };
 
   const handleCtaProjects = () => {
@@ -560,81 +553,48 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Services & Pricing Section */}
+      {/* CTA Banner */}
       <section id="services" className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <span className="text-[10px] uppercase tracking-widest text-emerald-400 font-extrabold border border-emerald-500/20 px-2.5 py-1 rounded-full bg-emerald-500/5">
-              {t('Services.title')}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mt-4 mb-2">
-              {t('Services.title')}
-            </h2>
-            <p className="text-muted-foreground text-sm font-semibold max-w-xl mx-auto">
-              {t('Services.subtitle')}
-            </p>
-          </div>
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative rounded-3xl border border-emerald-500/20 bg-emerald-500/5 p-10 md:p-16 text-center overflow-hidden"
+          >
+            {/* Decorative glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-blue-500/10 pointer-events-none rounded-3xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[200px] bg-emerald-500/10 blur-[80px] rounded-full pointer-events-none" />
 
-          <PricingCard
-            title={t('Services.devTitle')}
-            priceFromLabel={t('Services.priceFrom')}
-            priceValue={t('Services.priceVal')}
-            perProjectLabel={t('Services.perProject')}
-            features={[
-              t('Services.features.business'),
-              t('Services.features.landing'),
-              t('Services.features.portfolio'),
-              t('Services.features.company'),
-              t('Services.features.responsive'),
-              t('Services.features.seo'),
-              t('Services.features.forms'),
-              t('Services.features.performance'),
-            ]}
-            note={t('Services.note')}
-            ctaLabel={t('Services.cta')}
-            onCtaClick={handleCtaContact}
-          />
-        </div>
-      </section>
+            <div className="relative z-10 flex flex-col items-center gap-6">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-widest">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                {t('Services.title')}
+              </span>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-24 bg-zinc-950/20 border-t border-border/20">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <span className="text-[10px] uppercase tracking-widest text-emerald-400 font-extrabold border border-emerald-500/20 px-2.5 py-1 rounded-full bg-emerald-500/5">
-              {t('Contact.title')}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mt-4 mb-2">
-              {t('Contact.title')}
-            </h2>
-            <p className="text-muted-foreground text-sm font-semibold max-w-xl mx-auto">
-              {t('Contact.subtitle')}
-            </p>
-          </div>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-foreground tracking-tight leading-tight">
+                {t('Services.ctaHeading')}
+              </h2>
 
-          <ContactForm
-            ctaLabel={t('Contact.cta')}
-            emailLabel={t('Contact.email')}
-            githubLabel={t('Contact.github')}
-            linkedinLabel={t('Contact.linkedin')}
-            formName={t('Contact.formName')}
-            formEmail={t('Contact.formEmail')}
-            formMessage={t('Contact.formMessage')}
-            sendLabel={t('Contact.send')}
-            sendingLabel={t('Contact.sending')}
-            successMsg={t('Contact.success')}
-            errorMsg={t('Contact.error')}
-            copyLabel={t('Contact.copyEmail')}
-            copiedMsg={t('Contact.emailCopied')}
-          />
+              <p className="text-muted-foreground text-base font-medium max-w-xl leading-relaxed">
+                {t('Services.ctaDesc')}
+              </p>
+
+              <button
+                onClick={handleCtaContact}
+                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-primary text-primary-foreground font-bold text-sm transition-all hover:opacity-90 hover:scale-[1.03] active:scale-95 shadow-xl shadow-primary/20 cursor-none mt-2"
+              >
+                {t('Services.cta')}
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       <Footer />
 
-      {/* Hidden Terminal Console Modal */}
       <TerminalEasterEgg isOpen={terminalOpen} onClose={() => setTerminalOpen(false)} />
     </>
   );

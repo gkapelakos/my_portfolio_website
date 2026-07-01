@@ -95,7 +95,9 @@
       "forms": "Φόρμες Επικοινωνίας & Διασύνδεση με CRM / Email Marketing",
       "performance": "Κορυφαία Ταχύτητα & Απόδοση (Lighthouse Score 95+)"
     },
-    "cta": "Ξεκινήστε Σήμερα"
+    "cta": "Επικοινωνήστε Μαζί Μου",
+    "ctaHeading": "Ας Δημιουργήσουμε Κάτι Εξαιρετικό Μαζί",
+    "ctaDesc": "Έχετε ένα έργο στο μυαλό σας; Είμαι διαθέσιμος για freelance συνεργασία και αγαπώ να μετατρέπω ιδέες σε γρήγορες, εντυπωσιακές ψηφιακές εμπειρίες."
   },
   "Contact": {
     "title": "Ας Συνεργαστούμε",
@@ -122,7 +124,7 @@
     "aboutText": "Ο Γιάννης Καπελάκος είναι Full-Stack Developer που εξειδικεύεται σε React, Next.js, Node.js και Linux automation. Δημιουργεί γρήγορες, responsive και όμορφες ιστοσελίδες.",
     "skillsText": "Frontend: React, Next.js, TS, JS, HTML, CSS, Tailwind\nBackend: Node.js, REST APIs, Databases\nTools: Linux, Git, GitHub, Vercel, SEO, Performance",
     "projectsText": "1. Backplane - Landing page επιχειρήσεων: https://backplane-website.vercel.app/\n2. PennyPilot - Εφαρμογή προσωπικών οικονομικών: https://pennypilot-website.vercel.app/\n3. Autopilot Script - Σενάριο αυτοματοποίησης Linux: https://github.com/gkapelakos/Autopilot-Linux-Script",
-    "contactText": "Email: gkapelakos@gmail.com (placeholder)\nGitHub: github.com/gkapelakos\nLinkedIn: linkedin.com/in/gkapelakos",
+    "contactText": "Email: johnkapelakos5@gmail.com\nGitHub: github.com/gkapelakos\nLinkedIn: linkedin.com/in/gkapelakos",
     "neofetchText": "   /\\_/\\     guest@kapelakos.dev\n  ( o.o )    -------------------\n   > ^ <     OS: Arch Linux x86_64\n  /     \\    Kernel: 6.8.9-arch1-1\n |       |   Uptime: 2 μέρες, 4 ώρες\n  \\_ _ _/    Shell: bash 5.2.26\n             Resolution: 3840x2160\n             DE: GNOME 46.1\n             WM: Mutter\n             Terminal: kapelakos-portfolio-term\n             CPU: AMD Ryzen 9 7950X (32) @ 4.5GHz\n             GPU: NVIDIA RTX 4090\n             Memory: 64GB DDR5"
   },
   "NotFound": {
