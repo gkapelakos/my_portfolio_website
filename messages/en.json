@@ -1,0 +1,137 @@
+{
+  "Meta": {
+    "title": "Giannis Kapelakos | Premium Full-Stack Web Developer",
+    "description": "Portfolio of Giannis Kapelakos, a freelance Full-Stack Web Developer building high-performance, polished, and modern web applications."
+  },
+  "Nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "terminal": "Terminal (ESC)"
+  },
+  "Hero": {
+    "greeting": "Hello, I'm",
+    "name": "Giannis Kapelakos",
+    "title": "Full-Stack Web Developer",
+    "subtitle": "I build fast, scalable, and modern web applications for businesses, startups, and individuals.",
+    "ctaProjects": "View Projects",
+    "ctaContact": "Contact Me",
+    "ctaGithub": "GitHub",
+    "floatingBadge": "Open for Freelance Work"
+  },
+  "About": {
+    "title": "About Me",
+    "subtitle": "Crafting premium digital experiences through clean code and user-centered design.",
+    "paragraph1": "I am a self-taught Full-Stack Developer with a deep-seated passion for creating high-performance software, seamless automation, and polished user experiences. My journey started with curiosity and evolved into a professional commitment to crafting elegant digital products.",
+    "paragraph2": "I thrive at the intersection of development and design, ensuring that every interface is not only visually stunning but also fast, secure, and accessible. In addition to web development, I am a Linux power user, an open-source enthusiast, and a firm believer in automating repetitive tasks to maximize efficiency.",
+    "interestsTitle": "Areas of Interest",
+    "interests": {
+      "fullstack": "Full-Stack Development",
+      "uiux": "UI/UX & Interactive Design",
+      "performance": "Performance Optimization",
+      "automation": "Automation & Shell Scripting",
+      "linux": "Linux & System Administration",
+      "opensource": "Open Source Contributions",
+      "webtech": "Modern Web Technologies"
+    }
+  },
+  "Skills": {
+    "title": "Skills & Expertise",
+    "subtitle": "The technologies and methodologies I use to bring ideas to life.",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development & Infrastructure",
+    "tools": "Developer Tools & Best Practices"
+  },
+  "Projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of recent projects built with modern technologies.",
+    "liveDemo": "Live Demo",
+    "viewRepo": "GitHub Repo",
+    "featured": "Featured Project",
+    "openSourceTitle": "Open Source Contributions",
+    "openSourceSubtitle": "Helper scripts and libraries built for the developer community.",
+    "backplane": {
+      "name": "Backplane",
+      "desc": "A premium business landing page showcasing a modern software platform with reusable components, responsive layouts, elegant animations, and a clean professional design."
+    },
+    "pennypilot": {
+      "name": "PennyPilot",
+      "desc": "A modern personal finance application for budgeting and expense tracking featuring a clean dashboard, responsive design, and intuitive user experience."
+    },
+    "autopilot": {
+      "name": "Autopilot Linux Script",
+      "desc": "A Linux automation script that streamlines system setup, package installation, and post-install configuration."
+    }
+  },
+  "Github": {
+    "title": "GitHub Activity",
+    "subtitle": "My open-source contributions and development activity.",
+    "statsTitle": "Repository Statistics",
+    "viewProfile": "View GitHub Profile",
+    "languages": "Most Used Languages",
+    "repos": "Total Repositories",
+    "followers": "Followers",
+    "contribs": "Contributions",
+    "graphTitle": "Commit Contribution Heatmap",
+    "dummyAlert": "Real-time statistics loaded from API"
+  },
+  "Services": {
+    "title": "Services & Pricing",
+    "subtitle": "Tailored development services to scale your business.",
+    "devTitle": "Website Development",
+    "priceFrom": "Starting from",
+    "priceVal": "€200",
+    "perProject": "/ project",
+    "note": "Final pricing depends on project requirements and complexity.",
+    "features": {
+      "business": "Business Websites",
+      "landing": "High-Converting Landing Pages",
+      "portfolio": "Personal Portfolios",
+      "company": "Corporate & Enterprise Sites",
+      "responsive": "Fully Responsive Design (Mobile / Tablet / Desktop)",
+      "seo": "Search Engine Optimization (SEO)",
+      "forms": "Contact Forms & Lead Generation Integration",
+      "performance": "Extreme Speed & Performance Optimization (95+ Lighthouse)"
+    },
+    "cta": "Get Started Now"
+  },
+  "Contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Have a project in mind? Let's build something great.",
+    "cta": "Have a project in mind? Let's build something great together.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "formName": "Name",
+    "formEmail": "Email Address",
+    "formMessage": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again.",
+    "copyEmail": "Copy Email Address",
+    "emailCopied": "Email address copied to clipboard!"
+  },
+  "Terminal": {
+    "title": "Giannis' Linux Console",
+    "welcome": "Welcome to Giannis' Portfolio Terminal v1.0.0. Type 'help' to see available commands.",
+    "prompt": "guest@kapelakos.dev:~$",
+    "helpText": "Available commands:\n  help        - Show this menu\n  about       - Brief introduction\n  skills      - List core skills\n  projects    - Show projects with links\n  contact     - Display contact information\n  clear       - Clear the terminal screen\n  exit        - Close the terminal\n  neofetch    - Show system information",
+    "aboutText": "Giannis Kapelakos is a Full-Stack Developer specializing in React, Next.js, Node.js, and Linux automation. He builds fast, responsive, and beautiful websites.",
+    "skillsText": "Frontend: React, Next.js, TS, JS, HTML, CSS, Tailwind\nBackend: Node.js, REST APIs, Databases\nTools: Linux, Git, GitHub, Vercel, SEO, Performance",
+    "projectsText": "1. Backplane - Premium business landing page: https://backplane-website.vercel.app/\n2. PennyPilot - Personal finance tool: https://pennypilot-website.vercel.app/\n3. Autopilot Script - Linux setup script: https://github.com/gkapelakos/Autopilot-Linux-Script",
+    "contactText": "Email: gkapelakos@gmail.com (placeholder)\nGitHub: github.com/gkapelakos\nLinkedIn: linkedin.com/in/gkapelakos",
+    "neofetchText": "   /\\_/\\     guest@kapelakos.dev\n  ( o.o )    -------------------\n   > ^ <     OS: Arch Linux x86_64\n  /     \\    Kernel: 6.8.9-arch1-1\n |       |   Uptime: 2 days, 4 hours\n  \\_ _ _/    Shell: bash 5.2.26\n             Resolution: 3840x2160\n             DE: GNOME 46.1\n             WM: Mutter\n             Terminal: kapelakos-portfolio-term\n             CPU: AMD Ryzen 9 7950X (32) @ 4.5GHz\n             GPU: NVIDIA RTX 4090\n             Memory: 64GB DDR5"
+  },
+  "NotFound": {
+    "title": "404 - Page Not Found",
+    "desc": "The page you are looking for does not exist or has been moved.",
+    "cta": "Go Back Home"
+  },
+  "EasterEgg": {
+    "title": "Easter Egg Found!",
+    "desc": "You entered the Konami code! Enjoy some confetti! 🥳"
+  }
+}

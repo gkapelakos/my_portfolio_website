@@ -1,0 +1,137 @@
+{
+  "Meta": {
+    "title": "Γιάννης Καπελάκος | Premium Full-Stack Web Developer",
+    "description": "Προσωπικό portfolio του Γιάννη Καπελάκου, freelance Full-Stack Web Developer που εξειδικεύεται σε υψηλής απόδοσης, καλοσχεδιασμένες και σύγχρονες εφαρμογές ιστού."
+  },
+  "Nav": {
+    "about": "Σχετικά",
+    "skills": "Δεξιότητες",
+    "projects": "Έργα",
+    "services": "Υπηρεσίες",
+    "contact": "Επικοινωνία",
+    "terminal": "Τερματικό (ESC)"
+  },
+  "Hero": {
+    "greeting": "Γεια σας, είμαι ο",
+    "name": "Γιάννης Καπελάκος",
+    "title": "Full-Stack Web Developer",
+    "subtitle": "Σχεδιάζω και αναπτύσσω ταχύτατες, κλιμακώσιμες και σύγχρονες διαδικτυακές εφαρμογές για επιχειρήσεις, startups και ιδιώτες.",
+    "ctaProjects": "Δείτε τα Έργα",
+    "ctaContact": "Επικοινωνήστε Μαζί Μου",
+    "ctaGithub": "GitHub",
+    "floatingBadge": "Διαθέσιμος για Freelance Συνεργασία"
+  },
+  "About": {
+    "title": "Σχετικά με Εμένα",
+    "subtitle": "Δημιουργώντας κορυφαίες ψηφιακές εμπειρίες μέσα από καθαρό κώδικα και ανθρωποκεντρικό σχεδιασμό.",
+    "paragraph1": "Είμαι αυτοδίδακτος Full-Stack Developer με βαθιά αγάπη για τη δημιουργία λογισμικού υψηλής απόδοσης, τον αυτοματισμό και τις προσεγμένες εμπειρίες χρήστη. Το ταξίδι μου ξεκίνησε από περιέργεια και εξελίχθηκε σε μια επαγγελματική δέσμευση για τη δημιουργία κομψών ψηφιακών προϊόντων.",
+    "paragraph2": "Δραστηριοποιούμαι στη διασταύρωση ανάπτυξης (development) και σχεδιασμού (design), διασφαλίζοντας ότι κάθε διεπαφή είναι όχι μόνο οπτικά εντυπωσιακή αλλά και γρήγορη, ασφαλής και προσβάσιμη. Πέρα από το web development, είμαι power user του Linux, υποστηρικτής του ανοιχτού λογισμικού (open-source) και πιστεύω ακράδαντα στην αυτοματοποίηση επαναλαμβανόμενων εργασιών για τη μεγιστοποίηση της παραγωγικότητας.",
+    "interestsTitle": "Τομείς Ενδιαφέροντος",
+    "interests": {
+      "fullstack": "Full-Stack Development",
+      "uiux": "UI/UX & Διαδραστικός Σχεδιασμός",
+      "performance": "Βελτιστοποίηση Απόδοσης",
+      "automation": "Αυτοματισμοί & Shell Scripting",
+      "linux": "Linux & Διαχείριση Συστημάτων",
+      "opensource": "Συνεισφορές Ανοιχτού Κώδικα",
+      "webtech": "Σύγχρονες Τεχνολογίες Web"
+    }
+  },
+  "Skills": {
+    "title": "Δεξιότητες & Εμπειρία",
+    "subtitle": "Οι τεχνολογίες και οι μεθοδολογίες που χρησιμοποιώ για να κάνω τις ιδέες πραγματικότητα.",
+    "frontend": "Ανάπτυξη Frontend",
+    "backend": "Ανάπτυξη Backend & Υποδομές",
+    "tools": "Εργαλεία & Βέλτιστες Πρακτικές"
+  },
+  "Projects": {
+    "title": "Επιλεγμένα Έργα",
+    "subtitle": "Μια συλλογή από πρόσφατα έργα που δημιουργήθηκαν με σύγχρονες τεχνολογίες.",
+    "liveDemo": "Live Demo",
+    "viewRepo": "GitHub Repo",
+    "featured": "Επιλεγμένο Έργο",
+    "openSourceTitle": "Συνεισφορές Ανοιχτού Κώδικα",
+    "openSourceSubtitle": "Βοηθητικά σενάρια και βιβλιοθήκες για την κοινότητα των προγραμματιστών.",
+    "backplane": {
+      "name": "Backplane",
+      "desc": "Μια κορυφαία σελίδα παρουσίασης (landing page) για επιχειρήσεις που παρουσιάζει μια σύγχρονη πλατφόρμα λογισμικού με επαναχρησιμοποιήσιμα στοιχεία, προσαρμόσιμα layouts, κομψά animations και καθαρό επαγγελματικό σχεδιασμό."
+    },
+    "pennypilot": {
+      "name": "PennyPilot",
+      "desc": "Μια σύγχρονη εφαρμογή προσωπικών οικονομικών για διαχείριση προϋπολογισμού και καταγραφή εξόδων, η οποία διαθέτει ένα καθαρό dashboard, responsive σχεδιασμό και διαισθητική εμπειρία χρήστη."
+    },
+    "autopilot": {
+      "name": "Autopilot Linux Script",
+      "desc": "Ένα σενάριο αυτοματοποίησης Linux που απλοποιεί τη ρύθμιση του συστήματος, την εγκατάσταση πακέτων και τις ρυθμίσεις μετά την εγκατάσταση."
+    }
+  },
+  "Github": {
+    "title": "Δραστηριότητα GitHub",
+    "subtitle": "Οι συνεισφορές μου σε έργα ανοιχτού κώδικα και η προγραμματιστική μου δραστηριότητα.",
+    "statsTitle": "Στατιστικά Αποθετηρίων",
+    "viewProfile": "Δείτε το Προφίλ στο GitHub",
+    "languages": "Γλώσσες με τη Μεγαλύτερη Χρήση",
+    "repos": "Συνολικά Αποθετήρια",
+    "followers": "Ακόλουθοι",
+    "contribs": "Συνεισφορές",
+    "graphTitle": "Χάρτης Συνεισφορών (Commits)",
+    "dummyAlert": "Τα στατιστικά φορτώνονται σε πραγματικό χρόνο από το API"
+  },
+  "Services": {
+    "title": "Υπηρεσίες & Τιμολόγηση",
+    "subtitle": "Εξατομικευμένες υπηρεσίες ανάπτυξης για την ανάπτυξη της επιχείρησής σας.",
+    "devTitle": "Ανάπτυξη Ιστοσελίδων",
+    "priceFrom": "Ξεκινώντας από",
+    "priceVal": "€200",
+    "perProject": "/ έργο",
+    "note": "Η τελική τιμή εξαρτάται από τις απαιτήσεις και την πολυπλοκότητα του έργου.",
+    "features": {
+      "business": "Εταιρικές Ιστοσελίδες",
+      "landing": "Landing Pages Υψηλής Μετατροπής",
+      "portfolio": "Προσωπικά Portfolios",
+      "company": "Ιστοσελίδες Επιχειρήσεων & Οργανισμών",
+      "responsive": "Πλήρως Προσαρμόσιμος Σχεδιασμός (Mobile / Tablet / Desktop)",
+      "seo": "Βελτιστοποίηση Μηχανών Αναζήτησης (SEO)",
+      "forms": "Φόρμες Επικοινωνίας & Διασύνδεση με CRM / Email Marketing",
+      "performance": "Κορυφαία Ταχύτητα & Απόδοση (Lighthouse Score 95+)"
+    },
+    "cta": "Ξεκινήστε Σήμερα"
+  },
+  "Contact": {
+    "title": "Ας Συνεργαστούμε",
+    "subtitle": "Έχετε κάποιο έργο στο μυαλό σας; Ας δημιουργήσουμε κάτι εξαιρετικό.",
+    "cta": "Έχετε κάποιο έργο στο μυαλό σας; Ας χτίσουμε κάτι σπουδαίο μαζί.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "formName": "Όνομα",
+    "formEmail": "Διεύθυνση Email",
+    "formMessage": "Μήνυμα",
+    "send": "Αποστολή Μηνύματος",
+    "sending": "Αποστολή...",
+    "success": "Το μήνυμα στάλθηκε με επιτυχία!",
+    "error": "Αποτυχία αποστολής μηνύματος. Παρακαλώ δοκιμάστε ξανά.",
+    "copyEmail": "Αντιγραφή Email",
+    "emailCopied": "Το Email αντιγράφηκε στο clipboard!"
+  },
+  "Terminal": {
+    "title": "Κονσόλα Linux του Γιάννη",
+    "welcome": "Καλώς ορίσατε στο Τερματικό του Γιάννη v1.0.0. Πληκτρολογήστε 'help' για να δείτε τις διαθέσιμες εντολές.",
+    "prompt": "guest@kapelakos.dev:~$",
+    "helpText": "Διαθέσιμες εντολές:\n  help        - Εμφάνιση αυτού του μενού\n  about       - Σύντομη παρουσίαση\n  skills      - Λίστα βασικών δεξιοτήτων\n  projects    - Εμφάνιση έργων με συνδέσμους\n  contact     - Εμφάνιση στοιχείων επικοινωνίας\n  clear       - Καθαρισμός οθόνης τερματικού\n  exit        - Κλείσιμο τερματικού\n  neofetch    - Εμφάνιση πληροφοριών συστήματος",
+    "aboutText": "Ο Γιάννης Καπελάκος είναι Full-Stack Developer που εξειδικεύεται σε React, Next.js, Node.js και Linux automation. Δημιουργεί γρήγορες, responsive και όμορφες ιστοσελίδες.",
+    "skillsText": "Frontend: React, Next.js, TS, JS, HTML, CSS, Tailwind\nBackend: Node.js, REST APIs, Databases\nTools: Linux, Git, GitHub, Vercel, SEO, Performance",
+    "projectsText": "1. Backplane - Landing page επιχειρήσεων: https://backplane-website.vercel.app/\n2. PennyPilot - Εφαρμογή προσωπικών οικονομικών: https://pennypilot-website.vercel.app/\n3. Autopilot Script - Σενάριο αυτοματοποίησης Linux: https://github.com/gkapelakos/Autopilot-Linux-Script",
+    "contactText": "Email: gkapelakos@gmail.com (placeholder)\nGitHub: github.com/gkapelakos\nLinkedIn: linkedin.com/in/gkapelakos",
+    "neofetchText": "   /\\_/\\     guest@kapelakos.dev\n  ( o.o )    -------------------\n   > ^ <     OS: Arch Linux x86_64\n  /     \\    Kernel: 6.8.9-arch1-1\n |       |   Uptime: 2 μέρες, 4 ώρες\n  \\_ _ _/    Shell: bash 5.2.26\n             Resolution: 3840x2160\n             DE: GNOME 46.1\n             WM: Mutter\n             Terminal: kapelakos-portfolio-term\n             CPU: AMD Ryzen 9 7950X (32) @ 4.5GHz\n             GPU: NVIDIA RTX 4090\n             Memory: 64GB DDR5"
+  },
+  "NotFound": {
+    "title": "404 - Η σελίδα δεν βρέθηκε",
+    "desc": "Η σελίδα που αναζητάτε δεν υπάρχει ή έχει μετακινηθεί.",
+    "cta": "Επιστροφή στην Αρχική"
+  },
+  "EasterEgg": {
+    "title": "Βρέθηκε Easter Egg!",
+    "desc": "Εισαγάγατε τον κωδικό Konami! Απολαύστε λίγο κομφετί! 🥳"
+  }
+}
