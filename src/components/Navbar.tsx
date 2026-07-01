@@ -101,9 +101,16 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled ? 'py-4 glass border-b border-border/50 shadow-lg' : 'py-6 bg-transparent'
+        scrolled ? 'py-4' : 'py-6'
       }`}
     >
+      {/* Hardware-accelerated glass background transition to prevent repaint lag and white flashes */}
+      <div
+        className={`absolute inset-0 -z-10 transition-opacity duration-300 pointer-events-none ${
+          scrolled ? 'opacity-100' : 'opacity-0'
+        } glass border-b border-border/50 shadow-lg`}
+      />
+
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo / Title */}
         <Link
@@ -111,7 +118,7 @@ export default function Navbar({ onTerminalToggle }: NavbarProps) {
           className="text-lg font-extrabold tracking-tight text-foreground flex items-center gap-2 cursor-none select-none hover:opacity-85"
         >
           <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-500 bg-clip-text text-transparent">
-            Giannis Kapelakos
+            GK
           </span>
           <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-widest border border-border px-1.5 py-0.5 rounded-lg bg-secondary/50">
             Dev

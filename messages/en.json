@@ -13,7 +13,7 @@
   },
   "Hero": {
     "greeting": "Hello, I'm",
-    "name": "Giannis Kapelakos",
+    "name": "Giannis",
     "title": "Full-Stack Web Developer",
     "subtitle": "I build fast, scalable, and modern web applications for businesses, startups, and individuals.",
     "ctaProjects": "View Projects",
@@ -119,13 +119,13 @@
   "Terminal": {
     "title": "Giannis' Linux Console",
     "welcome": "Welcome to Giannis' Portfolio Terminal v1.0.0. Type 'help' to see available commands.",
-    "prompt": "guest@kapelakos.dev:~$",
+    "prompt": "guest@john.dev:~$",
     "helpText": "Available commands:\n  help        - Show this menu\n  about       - Brief introduction\n  skills      - List core skills\n  projects    - Show projects with links\n  contact     - Display contact information\n  clear       - Clear the terminal screen\n  exit        - Close the terminal\n  neofetch    - Show system information",
-    "aboutText": "Giannis Kapelakos is a Full-Stack Developer specializing in React, Next.js, Node.js, and Linux automation. He builds fast, responsive, and beautiful websites.",
+    "aboutText": "Giannis is a Full-Stack Developer specializing in React, Next.js, Node.js, and Linux automation. He builds fast, responsive, and beautiful websites.",
     "skillsText": "Frontend: React, Next.js, TS, JS, HTML, CSS, Tailwind\nBackend: Node.js, REST APIs, Databases\nTools: Linux, Git, GitHub, Vercel, SEO, Performance",
     "projectsText": "1. Backplane - Premium business landing page: https://backplane-website.vercel.app/\n2. PennyPilot - Personal finance tool: https://pennypilot-website.vercel.app/\n3. Autopilot Script - Linux setup script: https://github.com/gkapelakos/Autopilot-Linux-Script",
     "contactText": "Email: johnkapelakos5@gmail.com\nGitHub: github.com/gkapelakos\nLinkedIn: linkedin.com/in/gkapelakos",
-    "neofetchText": "   /\\_/\\     guest@kapelakos.dev\n  ( o.o )    -------------------\n   > ^ <     OS: Arch Linux x86_64\n  /     \\    Kernel: 6.8.9-arch1-1\n |       |   Uptime: 2 days, 4 hours\n  \\_ _ _/    Shell: bash 5.2.26\n             Resolution: 3840x2160\n             DE: GNOME 46.1\n             WM: Mutter\n             Terminal: kapelakos-portfolio-term\n             CPU: AMD Ryzen 9 7950X (32) @ 4.5GHz\n             GPU: NVIDIA RTX 4090\n             Memory: 64GB DDR5"
+    "neofetchText": "   /\\_/\\     guest@john.dev\n  ( o.o )    -------------------\n   > ^ <     OS: Arch Linux x86_64\n  /     \\    Kernel: 6.8.9-arch1-1\n |       |   Uptime: 2 days, 4 hours\n  \\_ _ _/    Shell: bash 5.2.26\n             Resolution: 3840x2160\n             DE: GNOME 46.1\n             WM: Mutter\n             Terminal: john-portfolio-term\n             CPU: AMD Ryzen 9 7950X (32) @ 4.5GHz\n             GPU: NVIDIA RTX 4090\n             Memory: 64GB DDR5"
   },
   "NotFound": {
     "title": "404 - Page Not Found",

@@ -34,9 +34,8 @@ export default function PageLoader() {
           className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black font-mono text-zinc-300"
         >
           <div className="w-full max-w-xs md:max-w-md flex flex-col gap-4 px-6">
-            {/* Terminal indicator line */}
             <div className="flex items-center gap-2 text-xs md:text-sm">
-              <span className="text-emerald-500 font-semibold">guest@kapelakos.dev:~$</span>
+              <span className="text-emerald-500 font-semibold">guest@john.dev:~$</span>
               <span className="text-zinc-100 animate-pulse">initialize_portfolio --fast</span>
             </div>
 
